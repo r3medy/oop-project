@@ -7,6 +7,7 @@ public class Product {
     private Category category;
     private double unitPrice;
     private int stockQuantity;
+    // TODO: add lowStockThreshold
 
     public Product(String name, double unitPrice, int stockQuantity, Category category) {
         productId += 1;
@@ -31,6 +32,7 @@ public class Product {
     public double getUnitPrice() { return unitPrice; }
     public int getStockQuantity() { return stockQuantity; }
     public Category getCategory() { return category; }
+    public String getProductType() { return "Non-Perishable"; }
 
     // -- Setters
     public void setName(String name) { this.name = name; }

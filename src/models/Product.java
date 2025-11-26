@@ -1,5 +1,5 @@
 package models;
-import interfaces.Category;
+import enums.*;
 
 public class Product {
     private static int productId = 0;
@@ -25,6 +25,15 @@ public class Product {
     public void decreaseStock(int decrement) {
         if(decrement <= 0 && stockQuantity >= decrement) return;
         this.stockQuantity -= decrement;
+    }
+    // May be removed
+    public void productInformation() {
+        System.out.println("Product ID     :: " + productId);
+        System.out.println("Product Name   :: " + name);
+        System.out.println("Product Type   :: " + this.getProductType());
+        System.out.println("Unit Price     :: " + unitPrice);
+        System.out.println("Stock Quantity :: " + stockQuantity);
+        System.out.println("Category       :: " + category);
     }
 
     // -- Getters
